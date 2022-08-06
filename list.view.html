@@ -1,0 +1,142 @@
+<div class="khonshu-tabs">
+  <input type="radio" name="tabs-radio-button" value=0 id="tabs-radio-button-0" checked/>
+  <label for="tabs-radio-button-0" onclick="khonshu_navigation.navigate('/list?s=0');">Todos</label>
+  <div class="khonshu-tab">
+    <table class="khonshu-table">
+      <thead>
+        <tr>
+          <th slot="table-header">#</th>
+          <th slot="table-header">Capa</th>
+          <th slot="table-header">Título</th>
+          <th slot="table-header">Nota</th>
+          <th slot="table-header">Gênero</th>
+          <th slot="table-header">Ações</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body"></tbody>
+    </table>
+  </div>
+
+  <input type="radio" name="tabs-radio-button" value=1 id="tabs-radio-button-1" />
+  <label for="tabs-radio-button-1" onclick="khonshu_navigation.navigate('/list?s=1');">Jogando</label>
+  <div class="khonshu-tab">
+    <table class="khonshu-table">
+      <thead>
+        <tr>
+          <th slot="table-header">#</th>
+          <th slot="table-header">Capa</th>
+          <th slot="table-header">Título</th>
+          <th slot="table-header">Nota</th>
+          <th slot="table-header">Gênero</th>
+          <th slot="table-header">Ações</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body"></tbody>
+    </table>
+  </div>
+
+  <input type="radio" name="tabs-radio-button" value=2 id="tabs-radio-button-2" />
+  <label for="tabs-radio-button-2" onclick="khonshu_navigation.navigate('/list?s=2');">Finalizados</label>
+  <div class="khonshu-tab">
+    <table class="khonshu-table">
+      <thead>
+        <tr>
+          <th slot="table-header">#</th>
+          <th slot="table-header">Capa</th>
+          <th slot="table-header">Título</th>
+          <th slot="table-header">Nota</th>
+          <th slot="table-header">Gênero</th>
+          <th slot="table-header">Ações</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body"></tbody>
+    </table>
+  </div>
+
+  <input type="radio" name="tabs-radio-button" value=3 id="tabs-radio-button-3" />
+  <label for="tabs-radio-button-3" onclick="khonshu_navigation.navigate('/list?s=3');">Em Espera</label>
+  <div class="khonshu-tab">
+    <table class="khonshu-table">
+      <thead>
+        <tr>
+          <th slot="table-header">#</th>
+          <th slot="table-header">Capa</th>
+          <th slot="table-header">Título</th>
+          <th slot="table-header">Nota</th>
+          <th slot="table-header">Gênero</th>
+          <th slot="table-header">Ações</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body"></tbody>
+    </table>
+  </div>
+
+  <input type="radio" name="tabs-radio-button" value=4 id="tabs-radio-button-4" />
+  <label for="tabs-radio-button-4" onclick="khonshu_navigation.navigate('/list?s=4');">Droppados</label>
+  <div class="khonshu-tab">
+    <table class="khonshu-table">
+      <thead>
+        <tr>
+          <th slot="table-header">#</th>
+          <th slot="table-header">Capa</th>
+          <th slot="table-header">Título</th>
+          <th slot="table-header">Nota</th>
+          <th slot="table-header">Gênero</th>
+          <th slot="table-header">Ações</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body"></tbody>
+    </table>
+  </div>
+
+  <input type="radio" name="tabs-radio-button" value=5 id="tabs-radio-button-5" />
+  <label for="tabs-radio-button-5" onclick="khonshu_navigation.navigate('/list?s=5');">Quero Jogar</label>
+  <div class="khonshu-tab">
+    <table class="khonshu-table">
+      <thead>
+        <tr>
+          <th slot="table-header">#</th>
+          <th slot="table-header">Capa</th>
+          <th slot="table-header">Título</th>
+          <th slot="table-header">Nota</th>
+          <th slot="table-header">Gênero</th>
+          <th slot="table-header">Ações</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body"></tbody>
+    </table>
+  </div>
+</div>
+
+
+<template id="table-row-template">
+  <tr>
+    <td class="centered-column set-data-prop" id="row-id"></td>
+    <td class="centered-column set-data-prop"><img class="set-data-prop" id="cover" src=""></td>
+    <td id="title" class="set-data-prop"></td>
+    <td class="centered-column set-data-prop">
+      <khonshu-anchor class="set-data-prop" id="rating" size="large" bg="main" color="background" fill="icon" badge="" counter="true">
+        <i class="bi bi-star-fill"></i>
+      </khonshu-anchor>
+    </td>
+    <td class="centered-column set-data-prop" id="genres"></td>
+    <td class="centered-column">
+      <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <khonshu-anchor class="row-edit-btn" size="medium" bg="transparent" bg-border="main" color="main" fill="icon">
+          <i class="bi bi-pencil-fill"></i>
+        </khonshu-anchor><br>
+        <khonshu-anchor class="row-delete-btn" size="medium" bg="transparent"  bg-border="danger" color="danger"  fill="icon">
+          <i class="bi bi-x-lg"></i>
+        </khonshu-anchor>
+      </div>
+    </td>
+  </tr>
+</template>
+
+<template id="empty-list-icon"><div style="position: absolute;top: 18%;"><img src="./src/17.svg" /></div></template>

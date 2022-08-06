@@ -1,0 +1,78 @@
+.khonshu-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 5px 5px 5px 5px;
+  margin: 30px 40px 50px 40px;
+}
+
+.khonshu-tabs input {
+  display: none;
+}
+
+.khonshu-tabs label {
+  padding: 8px 10px;
+  height: 18px;
+  color: var(--white);
+  background-color: var(--main-color);
+  cursor: pointer;
+  filter: brightness(70%);
+  transition: background 0.1s;
+}
+
+.khonshu-tabs label:not(:last-of-type) {
+  border-right: 1px solid var(--navbar-color);
+}
+
+.khonshu-tabs label:first-of-type {
+  border-radius: 5px 0 0 0;
+}
+
+.khonshu-tabs label:last-of-type {
+  border-radius: 0 5px 0 0;
+}
+
+.khonshu-tabs label a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.khonshu-tabs input:checked + label {
+  filter: brightness(100%);
+}
+
+.khonshu-tabs input:checked + label + .khonshu-tab {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.khonshu-tabs .khonshu-tab {
+  display: none;
+  width: 100%;
+  border-radius: 0 5px 5px 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+  order: 1;
+}
+
+@media (max-width: 734px) {
+  .khonshu-tabs {
+    font-size: 10pt;
+    margin: 0;
+  }
+
+  .khonshu-tabs label {
+    padding: 4px 6px;
+  }
+
+  .khonshu-tabs .khonshu-tab {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 465px) {
+  .khonshu-tabs .khonshu-tab {
+    overflow: unset;
+    overflow-x: scroll;
+  }
+}

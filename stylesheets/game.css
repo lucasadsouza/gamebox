@@ -1,0 +1,292 @@
+#game-body {
+  min-height: 230vh;
+}
+
+.video-iframe-full {
+  z-index: 1;
+  position: fixed;
+  top: -100px;
+  width: -webkit-fill-available;
+  aspect-ratio: 16 / 9;
+}
+
+.video-iframe-scrolled {
+  z-index: 3;
+  position: absolute;
+  top: 1000px;
+  right: 35px;
+  width: 65vw;
+  aspect-ratio: 16 / 9;
+}
+
+#details-title {
+  z-index: 3;
+  position: absolute;
+  top: 385px;
+  left: 270px;
+  font-weight: bold;
+  font-size: 30pt;
+  color: var(--white);
+}
+
+#details-cover-bg {
+  z-index: 2;
+  position: absolute;
+  top: 350px;
+  left: 55px;
+  width: 175px;
+  aspect-ratio: 7 / 10;
+  box-shadow: 0 0px 10px rgb(0 0 0 / 60%);
+}
+
+#details-cover {
+  position: absolute;
+  top: -130px;
+  left: 55px;
+}
+
+#details-section {
+  z-index: 2;
+  position: absolute;
+  top: 480px;
+  background-color: var(--background-color);
+  width: 100%;
+  min-height: 90vh;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 -64px 50px rgb(0 0 0 / 50%);
+}
+
+#about-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 60px 30px 30px 30px;
+}
+
+#info-section {
+  min-width: 180px;
+  margin-top: 115px;
+  background-color: var(--border-color);
+  padding: 30px 20px;
+  border-radius: 5px;
+  color: var(--text-color);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+}
+
+#about-section {
+  width: 100%;
+  margin-left: 40px;
+  min-height: 310px;
+  background-color: var(--border-color);
+  padding: 30px 20px;
+  border-radius: 5px;
+  color: var(--text-color);
+  text-align: justify;
+  text-indent: 45px;
+  line-height: 1.5;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1054px) {
+  #game-body {
+    min-height: 195vh;
+  }
+
+  .video-iframe-full {
+    top: -85px;
+  }
+
+  .video-iframe-scrolled {
+    top: 870px;
+  }
+
+  #details-section {
+    top: 350px;
+  }
+
+  #details-title {
+    top: 255px;
+  }
+}
+
+@media (max-width: 970px) {
+  .video-iframe-scrolled {
+    top: 850px;
+    width: 55vw;
+  }
+}
+
+@media (max-width: 830px) {
+  #game-body {
+    min-height: 155vh;
+  }
+
+  .video-iframe-full {
+    top: -35px;
+  }
+
+  .video-iframe-scrolled {
+    top: 820px;
+    width: 50vw;
+  }
+
+  #details-section {
+    top: 320px;
+  }
+
+  #details-title {
+    top: 225px;
+  }
+}
+
+@media (max-width: 720px) {
+  #game-body {
+    min-height: 220vh;
+  }
+
+  .video-iframe-full {
+    top: 45px;
+  }
+
+  .video-iframe-scrolled {
+    top: 1080px;
+    width: 90vw;
+    right: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  #details-section {
+    top: 380px;
+  }
+
+  #details-cover {
+    width: 140px;
+    top: -100px;
+    left: 35px;
+  }
+
+  #details-cover-bg {
+    width: 140px;
+    top: 280px;
+    left: 35px;
+  }
+
+  #details-title {
+    top: 310px;
+    left: 200px;
+    font-size: 22pt;
+  }
+
+  #about-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  #info-section {
+    order: +1;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #about-section div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about-section {
+    margin-left: 0;
+    margin-top: 70px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 610px) {
+  .video-iframe-full {
+    top: 80px;
+  }
+}
+
+@media (max-width: 550px) {
+  #game-body {
+    min-height: 200vh;
+  }
+
+  .video-iframe-full {
+    top: 65px;
+  }
+
+  .video-iframe-scrolled {
+    top: 975px;
+    width: 80vw;
+  }
+
+  #details-section {
+    top: 330px;
+  }
+
+  #details-cover {
+    top: -110px;
+  }
+
+  #details-title {
+    top: 260px;
+  }
+
+  #about-container {
+    font-size: 10pt;
+  }
+}
+
+@media (max-width: 475px) {
+  #game-body {
+    min-height: 175vh;
+  }
+
+  .video-iframe-full {
+    top: 65px;
+    height: 60vh;
+  }
+  .video-iframe-scrolled {
+    top: 810px;
+  }
+
+  #details-cover {
+    width: 115px;
+    top: -90px;
+    left: 25px;
+  }
+
+  #details-cover-bg {
+    width: 115px;
+    top: 240px;
+    left: 25px;
+  }
+
+  #details-title {
+    top: 270px;
+    left: 160px;
+    font-size: 16pt;
+  }
+
+  #about-container {
+    margin: 30px 15px 15px 15px;
+    font-size: 8pt;
+  }
+
+  #info-section, #about-section {
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 475px) {
+  #details-title {
+    top: 255px;
+    left: 170px;
+  }
+}

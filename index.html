@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <!-- Bootstrap Icons and Google Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Merienda:700|Oswald|Bangers|Montserrat:wght@900&amp;display=swap">
+
+  <!--owl css-->
+  <link rel="stylesheet" href="./stylesheets/owl/owl.carousel.min.css">
+  <link rel="stylesheet" href="./stylesheets/owl/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
+  <link rel="stylesheet" href="./khonshu/normalize.css">
+  <link rel="stylesheet" href="./khonshu/components/colors.css">
+  <link rel="stylesheet" href="./khonshu/components/radio/radio-group.css">
+  <link rel="stylesheet" href="./khonshu/components/tabs/tabs.css">
+  <link rel="stylesheet" href="./khonshu/components/table/table.css">
+
+  <link rel="stylesheet" href="./stylesheets/index.css">
+  <link rel="stylesheet" href="./stylesheets/sign-in-up.css">
+  <link rel="stylesheet" href="./stylesheets/game.css">
+  <link rel="stylesheet" href="./stylesheets/404.css">
+
+  <title>GameBox | Ínicio</title>
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+</head>
+
+<body theme="dark">
+  <khonshu-toast><i class="bi bi-info" slot="icon"></i></khonshu-toast>
+
+  <khonshu-modal id="profile-modal" title="Perfil" body-align="center" footer-align="center">
+    <div id="profile-img"></div>
+    <p id="profile-nickname">@nickname</p>
+    <khonshu-anchor bg="danger" color="white" fill="true" onclick="log_out_user();">Sair</khonshu-anchor>
+
+    <template id="profile-img-template">
+      <img class="profile-img"></img>
+    </template>
+  </khonshu-modal>
+
+  <khonshu-modal id="game-modal" title="@game" body-align="center" footer-align="space-between">
+    <h4>Status</h5>
+    <div id="game-status" class="khonshu-radio-group" bg="main">
+      <input type="radio" name="game-status" value=1 id="game-status-1" checked />
+      <label for="game-status-1">Jogando</label>
+
+      <input type="radio" name="game-status" value=2 id="game-status-2" />
+      <label for="game-status-2">Finalizado</label>
+
+      <input type="radio" name="game-status" value=3 id="game-status-3" />
+      <label for="game-status-3">Em Espera</label>
+
+      <input type="radio" name="game-status" value=4 id="game-status-4" />
+      <label for="game-status-4">Droppado</label>
+
+      <input type="radio" name="game-status" value=5 id="game-status-5" />
+      <label for="game-status-5">Quero Jogar</label>
+    </div>
+
+    <h4>Nota:</h4>
+    <div id="game-rating" class="khonshu-radio-group" bg="main">
+      <input type="radio" name="game-rating" value=0 id="game-rating-0" checked />
+      <label for="game-rating-0">-</label>
+
+      <input type="radio" name="game-rating" value=1 id="game-rating-1" />
+      <label for="game-rating-1">1</label>
+
+      <input type="radio" name="game-rating" value=2 id="game-rating-2" />
+      <label for="game-rating-2">2</label>
+
+      <input type="radio" name="game-rating" value=3 id="game-rating-3" />
+      <label for="game-rating-3">3</label>
+
+      <input type="radio" name="game-rating" value=4 id="game-rating-4" />
+      <label for="game-rating-4">4</label>
+
+      <input type="radio" name="game-rating" value=5 id="game-rating-5" />
+      <label for="game-rating-5">5</label>
+    </div>
+
+    <khonshu-anchor id="game-modal-delete-btn" slot="footer" bg="danger" color="white" fill="true" inactive>Remover</khonshu-anchor>
+
+    <khonshu-anchor id="game-modal-save-btn" slot="footer" bg="success" color="white" fill="true">Salvar</khonshu-anchor>
+  </khonshu-modal>
+
+  <khonshu-modal-spinner><i class="bi bi-controller"></i></khonshu-modal-spinner>
+
+  <khonshu-navbar>
+    <khonshu-anchor slot="logo" href="/" size="medium" bg="transparent" color="text" fill="false" khonshu-link>Gamebox</khonshu-anchor>
+
+    <khonshu-anchor slot="main-button-1" href="/" size="large" bg="transparent" color="text" fill="false" khonshu-link>
+      <i class="bi bi-grid"></i>
+    </khonshu-anchor>
+    <khonshu-anchor slot="main-button-2" href="/list" size="large" color="text" fill="false" inactive khonshu-link>
+      <i class="bi bi-list"></i>
+    </khonshu-anchor>
+
+    <khonshu-searchbar slot="searchbar"></khonshu-searchbar>
+
+    <khonshu-anchor onclick="khonshu_change_themer.change_theme()" slot="other-button-1" size="large" bg="transparent" color="text" fill="icon">
+      <i id="khonshu-theme-icon" class="bi bi-moon"></i>
+    </khonshu-anchor>
+    <khonshu-anchor size="huge" bg="transparent" color="main" fill="false" badge="1" badge-fill="true" slot="other-button-1">
+      <i class="bi bi-bell"></i>
+    </khonshu-anchor>
+
+    <khonshu-anchor id="profile-pic" slot="profile" href="/sign-in" size="huge" bg="transparent" color="main" fill="false" khonshu-link>
+      <i class="bi bi-person-circle"></i>
+    </khonshu-anchor>
+
+    <template id="profile-pic-template">
+      <img slot="profile" class="pf-img"></img>
+    </template>
+  </khonshu-navbar>
+
+  <main id="khonshu-view"></main>
+
+  <khonshu-footer name="Gamebox" date="Abril 2022" version="2.0" copyright="Todos os direitos reservados">
+    <khonshu-anchor href="/" color="white" khonshu-link>Ínicio</khonshu-anchor>,
+    <khonshu-anchor href="/sign-in" color="white" khonshu-link>Entrar</khonshu-anchor>,<br>
+    <khonshu-anchor href="/sign-up" color="white" khonshu-link>Cadastrar</khonshu-anchor>,
+    <khonshu-anchor href="/list" color="white" khonshu-link>Lista</khonshu-anchor>
+  </khonshu-footer>
+
+
+
+
+  <!-- FIREBASE -->
+  <!-- Firebase core -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+
+  <!-- Firebase APIs -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+  <script src="./scripts/firebase-main.js" type="text/javascript"></script>
+
+
+  <!-- OWL JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="scripts/owl/owl.carousel.min.js"></script>
+  <script src="scripts/owl/setup.js"></script>
+
+  <script src="./khonshu/components/buttons/anchor.js" type="text/javascript"></script>
+  <script src="./khonshu/components/navbar/navbar.js" type="text/javascript"></script>
+  <script src="./khonshu/components/footer/footer.js" type="text/javascript"></script>
+  <script src="./khonshu/components/modals/modal.js" type="text/javascript"></script>
+  <script src="./khonshu/components/modals/spinner.js" type="text/javascript"></script>
+  <script src="./khonshu/components/toast/toast.js" type="text/javascript"></script>
+  <script src="./khonshu/components/searchbar/searchbar.js" type="text/javascript"></script>
+  <script src="./khonshu/components/searchbar/search.js" type="text/javascript"></script>
+
+  <script src="./khonshu/components/text-inputs/text-input.js" type="text/javascript"></script>
+
+
+  <script src="./scripts/coral.js" type="text/javascript"></script>
+  <script src="./scripts/utils.js" type="text/javascript"></script>
+  <script src="./scripts/renders.js" type="text/javascript"></script>
+  <script src="./scripts/game.view.js" type="text/javascript"></script>
+  <script src="./scripts/add-edit-games.js" type="text/javascript"></script>
+  <script src="./khonshu/khonshu.js" type="text/javascript"></script>
+
+  <script src="./scripts/main.js" type="text/javascript"></script>
+</body>

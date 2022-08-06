@@ -1,0 +1,65 @@
+.khonshu-radio-group {
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.khonshu-radio-group input {
+  display: none;
+}
+
+.khonshu-radio-group label {
+  padding: 8px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  filter: brightness(70%);
+  transition: background 0.1s;
+}
+
+.khonshu-radio-group[bg=main] label {
+  color: var(--white);
+  background-color: var(--main-color);
+}
+
+.khonshu-radio-group[bg=success] label {
+  color: var(--white);
+  background-color: var(--success);
+}
+
+.khonshu-radio-group[bg=danger] label {
+  color: var(--white);
+  background-color: var(--danger);
+}
+
+.khonshu-radio-group[bg=warning] label {
+  color: var(--white);
+  background-color: var(--warning);
+}
+
+.khonshu-radio-group[bg=info] label {
+  color: var(--white);
+  background-color: var(--info);
+}
+
+.khonshu-radio-group label:not(:last-of-type) {
+  border-right: 1px solid var(--navbar-color);
+}
+
+.khonshu-radio-group label:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+
+.khonshu-radio-group label:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
+
+.khonshu-radio-group input:checked + label {
+  filter: brightness(100%);
+}
+
+@media (max-width: 734px) {
+  .khonshu-radio-group label {
+    padding: 4px 6px;
+  }
+}

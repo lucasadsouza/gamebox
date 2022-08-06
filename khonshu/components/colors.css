@@ -1,0 +1,29 @@
+/*COLORS*/
+/*LIGHT-THEME*/
+body {
+  --white: #f5f9fc;
+  --black: #1d1d1d;
+  --active: #f5f9fc;
+  --inactive: #6c757d;
+  --main-color: #0d6efd;
+  --success:#198754;
+  --danger:#dc3545;
+  --warning: #ffa600;
+  --info:#38454f;
+}
+body[theme=light] {
+  --background-color: #f5f9fc;
+  --text-color: #1d1d1d;
+  --border-color: #e3e3e3;
+  --navbar-color: #e8ecf3;
+  --searchbar-icon: 90%;
+}
+
+/*DARK-THEME*/
+body[theme=dark] {
+  --background-color: #1d1d1d;
+  --text-color: #f5f9fc;
+  --border-color: #181818;
+  --navbar-color: #212529;
+  --searchbar-icon: 0%;
+}

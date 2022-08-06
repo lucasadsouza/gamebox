@@ -1,0 +1,23 @@
+<div id="sign-in-form">
+  <h2 id="sign-in-form-title">Entrar</h2>
+
+  <div class="input-container">
+    <khonshu-text-input pass-id="email" type="email" placeholder="nome@exemplo.com">Email:</khonshu-text-input>
+  </div>
+
+  <div class="input-container">
+    <khonshu-text-input pass-id="password" type="password" placeholder="Senha">Senha:</khonshu-text-input>
+  </div>
+
+  <khonshu-anchor id="forget-password-btn" href="" bg="transparent" color="main" khonshu-link>Esqueceu sua senha?</khonshu-anchor>
+
+  <div class="btn-container">
+    <khonshu-anchor href="/sign-up" bg-border="inactive" fill="true" inactive khonshu-link>
+      <khonshu-anchor href="/sign-up" size="medium" inactive khonshu-link><i class="bi bi-person-plus"></i></khonshu-anchor> Cadastrar
+    </khonshu-anchor>
+
+    <khonshu-anchor  onclick="sign_in();" bg-border="main" fill="true" khonshu-link>
+      <khonshu-anchor  onclick="sign_in();" size="medium" bg="transparent" khonshu-link><i class="bi bi-box-arrow-in-right"></i></khonshu-anchor> Entrar
+    </khonshu-anchor>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+body {
+  font-family: "Comfortaa", Verdana, Arial;
+
+  background-color: var(--body-background-color);
+
+  transition: all 0.3s ease;
+}
+
+/*COLORS*/
+/*LIGHT-THEME*/
+body[theme=light] {
+  --body-background-color: #f5f9fc;
+}
+
+/*DARK-THEME*/
+body[theme=dark] {
+  --body-background-color: #1d1d1d;
+}
+
+main {
+  min-height: 60vh;
+}
+
+
+/* REFAZER COMO COMPONENTS */
+
+.carousel-container {
+  margin: 20px 10px 0 10px;
+}
+
+.carousel-container h3 {
+  color: var(--text-color);
+}
+
+.carousel-container:nth-of-type(1) {
+  margin-top: 80px;
+}
+
+.carousel-btn {
+  position: absolute;
+  bottom: 41px;
+  right: 5px;
+  display: none;
+}
+
+.carousel-btn-father {
+  position: relative;
+}
+
+.carousel-btn-father:hover > .carousel-btn {
+  display: block;
+}
+
+.list-category {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  border-radius: 0 0 5px 0;
+}
+
+.carousel-item-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  color: var(--text-color);
+}
+
+@media (max-width: 420px) {
+  .carousel-item-btn {
+    top: 70%;
+    left: 79%;
+  }
+}
+
+@media (max-width: 370px) {
+  .carousel-item-btn {
+    top: 66%;
+    left: 76%;
+  }
+}
+
+@media (max-width: 340px) {
+  .carousel-item-btn {
+    top: 63%;
+    left: 73%;
+  }
+}
+
+.owl-theme .owl-stage-outer {
+  position: relative;
+}
+
+.owl-theme .owl-nav {
+  position: absolute;
+  top: 45%;
+  margin: 0;
+  width: 100%;
+  height: 0%;
+  color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  font-size: 80pt;
+  align-items: center;
+}
+
+.owl-theme .owl-nav .disabled {
+  filter: grayscale(80%);
+}
+
+.owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next {
+  opacity: 0.7;
+}
+
+.owl-theme .owl-nav .owl-prev:hover, .owl-theme .owl-nav .owl-next:hover {
+  background: transparent;
+  opacity: 1;
+  color: var(--main-color);
+  filter: brightness(70%);
+}
+
+
+#profile-img {
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+
+.profile-img {
+  position: relative;
+  width: 20%;
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+}
+
+#profile-nickname {
+  margin-bottom: 30px;
+}

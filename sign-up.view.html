@@ -1,0 +1,28 @@
+<div id="sign-in-form">
+  <h2 id="sign-in-form-title">Cadastrar</h2>
+
+  <div id="nickname-age-container" class="input-container">
+    <khonshu-text-input pass-id="nickname" type="text" placeholder="Ex: Game Hunther">Apelido:</khonshu-text-input>
+    <khonshu-text-input pass-id="age" type="text" placeholder="Ex: 16">Idade:</khonshu-text-input>
+  </div>
+
+  <div class="input-container">
+    <khonshu-text-input pass-id="email" type="email" placeholder="nome@exemplo.com">Email:</khonshu-text-input>
+  </div>
+
+  <div class="input-container">
+    <khonshu-text-input pass-id="password" type="password" placeholder="Senha">Senha:</khonshu-text-input>
+  </div>
+
+  <khonshu-anchor id="forget-password-btn" href="" bg="transparent" color="main" khonshu-link>Esqueceu sua senha?</khonshu-anchor>
+
+  <div class="btn-container">
+    <khonshu-anchor href="/sign-in" bg-border="inactive" fill="true" inactive khonshu-link>
+      <khonshu-anchor href="/sign-in" size="medium" inactive khonshu-link><i class="bi bi-person-plus"></i></khonshu-anchor> Entrar
+    </khonshu-anchor>
+
+    <khonshu-anchor onclick="sign_up();" bg-border="main" fill="true" khonshu-link>
+      <khonshu-anchor onclick="sign_up();" size="medium" bg="transparent" khonshu-link><i class="bi bi-box-arrow-in-right"></i></khonshu-anchor> Cadastrar
+    </khonshu-anchor>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+#sign-in-form {
+  margin: 60px 30%;
+  padding: 40px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+  color: var(--main-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#sign-in-form-title {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.input-container {
+  margin-bottom: 25px;
+  width: 80%;
+}
+
+#nickname-age-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+#nickname-age-container khonshu-text-input {
+  width: 45%;
+}
+
+#forget-password-btn {
+  margin-bottom: 25px;
+}
+
+.btn-container {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+@media (max-width: 1069px) {
+  #sign-in-form {
+    margin: 60px 25%;
+  }
+}
+
+@media (max-width: 793px) {
+  #sign-in-form {
+    margin: 60px 10%;
+  }
+}
+
+@media (max-width: 400px) {
+  #sign-in-form {
+    margin: 60px 0%;
+    padding: 30px;
+    box-shadow: none;
+  }
+}

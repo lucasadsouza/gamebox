@@ -1,0 +1,33 @@
+.khonshu-table {
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.9em;
+  width: 100%;
+  min-height: 200px;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+.khonshu-table thead tr {
+  background-color: var(--main-color);
+  color: var(--white);
+  text-align: left;
+  font-weight: bold;
+}
+
+.khonshu-table th, .khonshu-table td {
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.khonshu-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.khonshu-table tbody tr:hover {
+  color: var(--main-color);
+}
+
+.khonshu-table tbody tr td img {
+  width: 70px;
+}

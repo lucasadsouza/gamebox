@@ -1,0 +1,34 @@
+#background-404 {
+  width: -webkit-fill-available;
+  aspect-ratio: 16 / 9;
+}
+
+#video-iframe-full-404 {
+  z-index: 1;
+  position: absolute;
+  width: -webkit-fill-available;
+  aspect-ratio: 16 / 9;
+  top: calc(0% + 75.19px);
+  filter: brightness(50%);
+}
+
+#title-404 {
+  position: absolute;
+  z-index: 2;
+  font-size: 40vw;
+  color: var(--white);
+  margin: 0;
+  left: 50%;
+  top: 13%;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 768px) {
+  #video-iframe-full-404 {
+    top: calc(0% + 106.19px);
+  }
+
+  #title-404 {
+    top: 25%;
+  }
+}
