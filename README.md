@@ -4,7 +4,8 @@ Gamebox is a game database website, it is school project made with JS Vanilla, H
 
 ---
 \
-Coral API: https://github.com/lucasadsouza/coral_api\
+Coral API: https://github.com/lucasadsouza/coral_api
+\
 Khonshu WebKit: https://github.com/lucasadsouza/khonshu_webkit
 
 See it in action on: https://gamebox-1f010.firebaseapp.com
